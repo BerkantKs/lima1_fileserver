@@ -1,0 +1,38 @@
+#httpd_server_admin: bert@linuxlab.lan
+#httpd_listen: 8080
+---
+
+#--firewall-----------------------------#
+rhbase_firewall_allow_services:
+  - samba
+#-------------------------------#
+
+rhbase_user_groups:
+  - Verkoop
+
+samba_load_homes: true
+
+#--users-----------------------------#
+rhbase_users: 
+  - name: Joa
+    comment: 'Joa'
+    password: '!!'
+    shell: /sbin/nologin
+    groups: 
+      - Verkoop
+
+
+
+samba_users:
+  - name: Joa
+    password: felix
+
+
+samba_shares:
+  - name: Verkoop
+    group: Verkoop
+    valid_users: +Verkoop
+    write_list: +Verkoop
+
+#-------------------------------#
+

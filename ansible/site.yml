@@ -1,0 +1,17 @@
+# site.yml
+---
+- hosts: lima1
+  become: true
+##  tasks: 
+##    - name: Ensure Apache is installed
+##      package: 
+##      name: 
+##        - httpd
+##        - mod_ssl
+##      state: installed
+  roles:
+    - bertvv.rh-base
+    - bertvv.samba
+   
+
+

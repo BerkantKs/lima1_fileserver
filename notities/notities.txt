@@ -1,0 +1,3 @@
+group bekijken in verkenner met:
+
+\\ip-adres_van_server\groupName

@@ -22,13 +22,5 @@ set -o pipefail
 # Variables
 #------------------------------------------------------------------------------
 
-#yum install samba samba-client
 
-info 'samba installed'
-
-#systemctl start smb.service
-#systemctl start nmb.service
-
-#systemctl enable smb.service
-#systemctl enable nmb.service
 

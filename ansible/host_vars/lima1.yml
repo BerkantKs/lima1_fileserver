@@ -8,7 +8,11 @@ rhbase_firewall_allow_services:
 #-------------------------------#
 
 rhbase_user_groups:
+  - IT-Administratie
   - Verkoop
+  - Administratie
+  - Ontwikkeling
+  - Directie 
 
 samba_load_homes: true
 
@@ -19,20 +23,43 @@ rhbase_users:
     password: '!!'
     shell: /sbin/nologin
     groups: 
+      - IT-Administratie
+  - name: Max
+    comment: 'Max'
+    password: YOKB.qTipuJSA
+    groups: 
+      - IT-Administratie
       - Verkoop
-
+      - Administratie
+      - Ontwikkeling
+      - Directie
 
 
 samba_users:
   - name: Joa
     password: felix
-
+  - name: Max
+    password: payne
 
 samba_shares:
+  - name: IT-Administratie
+    group: IT-Administratie
+    valid_users: +IT-Administratie
+    write_list: +IT-Administratie
   - name: Verkoop
     group: Verkoop
     valid_users: +Verkoop
-    write_list: +Verkoop
+  - name: Administratie
+    group: Administratie
+    valid_users: +Administratie
+  - name: Ontwikkeling
+    group: Ontwikkeling
+    valid_users: +Ontwikkeling
+  - name: Directie
+    group: Directie
+    valid_users: +Directie
+
+
 
 #-------------------------------#
 

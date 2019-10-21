@@ -49,15 +49,19 @@ samba_shares:
   - name: Verkoop
     group: Verkoop
     valid_users: +Verkoop
+    write_list: +Verkoop
   - name: Administratie
     group: Administratie
     valid_users: +Administratie
+    write_list: +Administratie
   - name: Ontwikkeling
     group: Ontwikkeling
     valid_users: +Ontwikkeling
+    write_list: +Ontwikkeling
   - name: Directie
     group: Directie
     valid_users: +Directie
+    write_list: +Directie
 
 
 
